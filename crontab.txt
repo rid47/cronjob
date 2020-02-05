@@ -1,0 +1,17 @@
+Go to crontab -e
+
+Write the following:
+
+@hourly /home/iot/background_server/bhms/myscript.sh
+
+
+# follow https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/
+
+# White your script @ myscript.sh
+
+# Make your script executable: chmod +x myscript.sh
+
+# Check if it's working by ./myscript.sh
+
+# grep CRON /var/log/syslog to know if your cronjob worked properly
+

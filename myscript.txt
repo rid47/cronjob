@@ -1,0 +1,5 @@
+#myscript.sh
+
+kill -9 $(pgrep -f bhms.py)
+cd /home/iot/background_server/bhms/
+nohup python bhms.py>bhms.out &
