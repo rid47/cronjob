@@ -1,5 +1,5 @@
 #myscript.sh
-
+echo Last Execution Date and Time is: `date +"%Y-%m-%d %T"`
 kill -9 $(pgrep -f bhms.py)
 cd /home/iot/background_server/bhms/
 nohup python bhms.py>bhms.out &
