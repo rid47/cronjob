@@ -1,19 +1,19 @@
-Go to crontab -e
+(1) White your script @ myscript.sh # for suggestion follow https://tecadmin.net/get-current-date-and-time-in-bash/
 
-Write the following:
+(2) Make your script executable: chmod +x myscript.sh
 
-@hourly /home/iot/background_server/bhms/myscript.sh
+(3) Check if it's working by executing: ./myscript.sh
 
+(4) Go to crontab -e
 
-# follow https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/
+(5) Write the following to execute your script every hour (this will log the output to syscript.log file):
 
-# White your script @ myscript.sh
+@hourly /home/iot/background_server/bhms/myscript.sh > /home/iot/background_server/bhms/myscript.log 2>&1
 
-# Make your script executable: chmod +x myscript.sh
+# follow https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/ on how to write cronjobs
+# follow this to log cronjob output: https://www.thegeekstuff.com/2012/07/crontab-log/
 
-# Check if it's working by ./myscript.sh
+(6) grep CRON /var/log/syslog to know if your cronjob worked properly
 
-# grep CRON /var/log/syslog to know if your cronjob worked properly
-
-# or grep CRON /var/log/cron to know if your cronjob worked properly
+# or grep CRON /var/log/cron (based on your linux version) to know if your cronjob worked properly
 
