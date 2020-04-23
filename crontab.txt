@@ -15,3 +15,5 @@ Write the following:
 
 # grep CRON /var/log/syslog to know if your cronjob worked properly
 
+# or grep CRON /var/log/cron to know if your cronjob worked properly
+
