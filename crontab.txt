@@ -1,4 +1,4 @@
-(1) White your script @ myscript.sh # for suggestion follow https://tecadmin.net/get-current-date-and-time-in-bash/
+(1) White your script @ myscript.sh # for suggestion follow https://tecadmin.net/get-current-date-and-time-in-bash/ or checkout myscript.txt of this repo
 
 (2) Make your script executable: chmod +x myscript.sh
 
